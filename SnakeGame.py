@@ -46,4 +46,28 @@ def messageBox(subject, content):
     pass
 
 def main():
+    width = 500
+    height = 500
+    rows = 20
+
+    win = pygame.display.set_mode((width, height))
+    s = snake((255, 0, 0), (10, 10))
+
+    flag = True
+
+    clock = pygame.time.Clock
+
+    while flag:
+        pygame.time.delay(50)
+        clock.tick(10)
+         
     pass
+
+# rows =
+# w =
+# h =
+
+cube.rows = rows
+cube.w = w
+
+main()
