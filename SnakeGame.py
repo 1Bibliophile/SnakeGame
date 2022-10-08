@@ -18,8 +18,15 @@ class cube(object):
         pass
 
 class snake(object):
+    body = []
+    turns = {}
+    
     def __init__(self, color, pos):
-        pass
+        self.color = color
+        self.head = cube(pos)
+        self.body.append(self.head)
+        self.dirnx = 0
+        self.dirny = 1
 
     def move(self):
         pass
@@ -48,7 +55,7 @@ def drawGrid(w, rows, surface):
 def redrawWindow(surface):
     global rows, width
     surface.fill((0,0,0))
-    drawGrid(width, row, surface)
+    drawGrid(width, rows, surface)
     
     pygame.display.update()
     pass
