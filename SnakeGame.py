@@ -1,5 +1,6 @@
 import math
 import random
+from turtle import circle
 import pygame
 import tkinter as tk
 from tkinter import messagebox
@@ -27,6 +28,15 @@ class cube(object):
         j = self.pos[1]
 
         pygame.draw.rect(surface, self.color, (i * distance + 1, j * distance + 1, distance - 2, distance - 2))
+            
+        if eyes:
+            center = distance // 2 
+            radius = 3
+            circleMiddle = (i * distance + center - radius, j * distance + 8)
+            circleMiddle2 = (i * distance + distance - radius * 2, j * distance + 8)
+            pygame.draw.circle(surface, (0,0,0), circleMiddle, radius)
+            pygame.draw.circle(surface, (0,0,0), circleMiddle2, radius)
+
 
 class snake(object):
     body = []
